@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const HeroGridSection = () => {
   return (
-  <section className="bg-white px-4 pt-24 pb-16">
-      <div className="max-w-5xl mx-auto text-center mb-12 mt-0">
-        <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r text-indigo-900 bg-clip-text text-transparent mt-0 mb-2">
+    <section className="px-4 pt-20 pb-16 bg-white/70 backdrop-blur-md rounded-lg">
+      <div className="max-w-5xl mx-auto text-center mb-12">
+        <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0e7490] text-center drop-shadow-sm mb-4">
           Fan Gear Redefined
         </h1>
-        <p className="text-lg sm:text-xl text-gray-600 mt-0">
+        <p className="text-lg sm:text-xl text-gray-700">
           Express your loyalty through bold, authentic{" "}
           <span className="font-semibold text-indigo-600">club</span> and{" "}
           <span className="font-semibold text-pink-600">country</span> designs
@@ -25,8 +25,7 @@ const HeroGridSection = () => {
             alt="Clubs"
             className="w-full h-64 object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/30 to-transparent group-hover:from-indigo-600/50 transition" />
-          <div className="absolute inset-0 flex items-end justify-center pb-6">
+          <div className="absolute inset-0 flex items-end justify-center pb-6 bg-gradient-to-t from-black/50 to-transparent">
             <h2 className="text-3xl font-extrabold text-white">Club Zone</h2>
           </div>
         </Link>
@@ -41,8 +40,7 @@ const HeroGridSection = () => {
             alt="Countries"
             className="w-full h-64 object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-pink-500/30 to-transparent group-hover:from-pink-500/50 transition" />
-          <div className="absolute inset-0 flex items-end justify-center pb-6">
+          <div className="absolute inset-0 flex items-end justify-center pb-6 bg-gradient-to-t from-black/50 to-transparent">
             <h2 className="text-3xl font-extrabold text-white">Country Zone</h2>
           </div>
         </Link>

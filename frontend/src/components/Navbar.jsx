@@ -22,7 +22,7 @@ const Navbar = () => {
 					<nav className="flex flex-wrap items-center gap-4">
 						<Link
 							to="/"
-							className="text-gray-700 hover:text-indigo-600 font-medium transition duration-300"
+							className=" text-xl  text-gray-700 hover:text-[#3c49ff] font-medium transition duration-300"
 						>
 							Home
 						</Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
 						{user && (
 							<Link
 								to="/cart"
-								className="relative text-gray-700 hover:text-indigo-600 transition font-medium"
+								className="relative text-xl text-gray-700 hover:text-[#3c49ff] transition font-medium"
 							>
 								<ShoppingCart className="inline-block mr-1" size={20} />
 								<span className="hidden sm:inline">Cart</span>
@@ -45,7 +45,7 @@ const Navbar = () => {
 						{isAdmin && (
 							<Link
 								to="/secret-dashboard"
-								className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg font-semibold transition flex items-center"
+									className="bg-[#5c66ff] hover:bg-[#3c49ff] text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
 							>
 								<Lock className="mr-2" size={18} />
 								<span className="hidden sm:inline">Dashboard</span>
@@ -55,7 +55,7 @@ const Navbar = () => {
 						{user ? (
 							<button
 								onClick={logout}
-								className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
+									className="bg-[#5c66ff] hover:bg-[#3c49ff] text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
 							>
 								<LogOut size={18} />
 								<span className="hidden sm:inline ml-2">Log Out</span>
@@ -64,14 +64,14 @@ const Navbar = () => {
 							<>
 								<Link
 									to="/signup"
-									className="bg-gradient-to-r from-pink-500 to-indigo-500 text-white px-4 py-2 rounded-lg font-semibold flex items-center transition hover:brightness-105"
+									className="bg-[#5c66ff] hover:bg-[#3c49ff] text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
 								>
 									<UserPlus className="mr-2" size={18} />
 									Sign Up
 								</Link>
 								<Link
 									to="/login"
-									className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
+									className="bg-[#5c66ff] hover:bg-[#3c49ff] text-gray-800 px-4 py-2 rounded-lg font-semibold flex items-center transition"
 								>
 									<LogIn className="mr-2" size={18} />
 									Login

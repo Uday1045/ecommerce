@@ -22,7 +22,7 @@ const ClubDetailPage = () => {
 	return (
 		<div className="min-h-screen bg-white text-gray-800">
 			<div className="container mx-auto px-4 py-8">
-				<h1 className="text-3xl font-bold text-center mb-8 text-emerald-500 capitalize">
+				<h1 className="text-3xl font-bold text-center mb-8 text-[#0e7490] capitalize">
 					{slug.replace("-", " ")}
 				</h1>
 

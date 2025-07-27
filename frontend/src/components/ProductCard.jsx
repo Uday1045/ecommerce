@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
 
 				<button
 					onClick={handleAddToCart}
-					className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-pink-400"
+className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#3845f5] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-pink-400"
 				>
 					<ShoppingCart size={20} />
 					Add to cart
