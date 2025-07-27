@@ -15,7 +15,7 @@ import upload from "../lib/multerConfig.js";
 
 const router = express.Router();
 
-router.get("/", protectRoute, adminRoute, getAllProducts);
+router.get("/", protectRoute, getAllProducts);
 router.post("/upload-products",upload.single("file"), uploadProductExcel);
 
 router.get("/featured", getFeaturedProducts);

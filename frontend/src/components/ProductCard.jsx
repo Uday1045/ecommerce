@@ -6,40 +6,44 @@ import { useCartStore } from "../stores/useCartStore";
 const ProductCard = ({ product }) => {
 	const { user } = useUserStore();
 	const { addToCart } = useCartStore();
+
 	const handleAddToCart = () => {
 		if (!user) {
 			toast.error("Please login to add products to cart", { id: "login" });
 			return;
-		} else {
-			// add to cart
-			addToCart(product);
 		}
+		addToCart(product);
 	};
 
 	return (
-		<div className='flex w-full relative flex-col overflow-hidden rounded-lg border border-gray-700 shadow-lg'>
-			<div className='relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl'>
-				<img className='object-cover w-full' src={product.image} alt='product image' />
-				<div className='absolute inset-0 bg-black bg-opacity-20' />
+		<div className="flex w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-transform hover:scale-[1.01]">
+			<div className="relative h-64 w-full overflow-hidden">
+				<img
+					src={product.image}
+					alt="product"
+					className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+				/>
+				{/* Gradient overlay */}
+				{/* <div className="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-purple-500/20 to-indigo-500/10" /> */}
 			</div>
 
-			<div className='mt-4 px-5 pb-5'>
-				<h5 className='text-xl font-semibold tracking-tight text-white'>{product.name}</h5>
-				<div className='mt-2 mb-5 flex items-center justify-between'>
-					<p>
-						<span className='text-3xl font-bold text-emerald-400'>${product.price}</span>
-					</p>
+			<div className="p-5">
+				<h5 className="text-lg font-semibold text-gray-900 truncate">{product.name}</h5>
+
+				<div className="mt-3 mb-4">
+					<p className="text-2xl font-bold text-pink-600">₹{product.price}</p>
 				</div>
+
 				<button
-					className='flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-center text-sm font-medium
-					 text-white hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-300'
 					onClick={handleAddToCart}
+					className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-pink-400"
 				>
-					<ShoppingCart size={22} className='mr-2' />
+					<ShoppingCart size={20} />
 					Add to cart
 				</button>
 			</div>
 		</div>
 	);
 };
+
 export default ProductCard;
