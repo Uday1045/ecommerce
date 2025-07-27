@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
 app.use(cors({
-  origin: "http://localhost:5173", // or your frontend domain
+  origin: ["http://localhost:5173","https://ecommerce-1-gmxz.onrender.com"], // or your frontend domain
   credentials: true,              // 🔥 Important for cookies
 }));
 app.use(cookieParser());
